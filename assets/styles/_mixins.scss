@@ -1,0 +1,50 @@
+// https://vuetifyjs.com/en/api/vuetify/#sass-variables $display-breakpoints
+@import "~vuetify/src/styles/settings/_variables";
+
+
+// Managing mediaQueries
+@mixin media-responsively($breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+// Handling styles in RTL mode
+@mixin setStyleRTL() {
+    @at-root html[dir="rtl"] #{&} {
+        @content;
+    }
+}
+// Handling styles in LTR mode
+@mixin setStyleLTR() {
+    @at-root html[dir="ltr"] #{&} {
+        @content;
+    }
+}
+// Managing centering
+@mixin flex-center($position: both, $isInline: false) {
+    @if ($isInline == true) {
+        display: inline-flex !important;
+    } @else {
+        display: flex !important;
+    }
+
+    @if ($position == "vertical") {
+        align-items: center;
+    } @else if ($position == "horizontal") {
+        justify-content: center;
+    } @else {
+        justify-content: center;
+        align-items: center;
+    }
+}
+// Square dimensions
+@mixin make-square($size) {
+    width: $size;
+    height: $size;
+    overflow: hidden;
+}
+// Circle radius
+@mixin make-circle($radius) {
+    @include make-square($radius);
+    border-radius: 50%;
+}

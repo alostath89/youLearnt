@@ -1,0 +1,39 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+
+/* @import "~vuetify/src/styles/settings/_variables";
+https://vuetifyjs.com/en/features/sass-variables/#variable-api
+@import '~vuetify/src/styles/styles.sass';
+ */
+
+// @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&display=swap");
+@font-face {
+    font-family: Poppins, "sans-serif";
+    src: "https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&display=swap";
+}
+
+$btn-letter-spacing: 0;
+$btn-text-transform: none;
+$line-height-root: 1;
+$card-elevation: 0;
+$grid-gutter: 15px;
+
+$headings: (
+        'h1': (
+                'size': 32px,
+        ),
+        'h2': (
+                'size': 28px,
+        ),
+        'h3': (
+                'size': 24px,
+        ),
+        'h4': (
+                'size': 20px,
+        ),
+        'h5': (
+                'size': 16px,
+        ),
+        'h6': (
+                'size': 12px,
+        )
+);

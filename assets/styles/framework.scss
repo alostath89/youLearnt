@@ -1,0 +1,100 @@
+@import "./fontAwesome/main";
+
+@import "./mixins";
+@import "./landBoard";
+@import "./dashboard";
+@import "./vOverrides";
+
+a {
+    text-decoration: none;
+}
+p {
+    margin-bottom: 0 !important;
+    line-height: 1.4;
+}
+.flex-center {
+    @include flex-center();
+}
+.flex-center-horizontal {
+    @include flex-center("horizontal");
+}
+.h-auto {
+    height: auto !important;
+}
+.w-auto {
+    height: auto !important;
+}
+.bold-underline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.primary-bold {
+    color: var(--v-primary-base);
+    font-weight: bold !important;
+}
+.h-100 {
+    height: 100% !important;
+}
+.w-100 {
+    width: 100% !important;
+}.w-50 {
+    width: 50% !important;
+}
+.text-caption {
+    color: var(--v-accent-lighten4);
+}
+.error-expansion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .v-chip {
+        color: #fff;
+    }
+}
+::-webkit-scrollbar {
+    @include make-square(8px);
+    &-track {
+        background-color: var(--v-accent-lighten5);
+    }
+    &-thumb {
+        background-color: var(--v-accent-lighten2);
+        border-radius: 1rem;
+    }
+}
+.toasted-container {
+    .toasted {
+        overflow: auto;
+        i {
+            @include setStyleRTL() {
+                margin-left: 5px;
+            }
+            @include setStyleLTR() {
+                margin-right: 5px;
+            }
+        }
+    }
+    bottom: -3px;
+    top: unset !important;
+    @include media-responsively("md") {
+        top: 8px !important;
+        bottom: unset;
+        max-width: 500px;
+    }
+    i {
+        @include setStyleRTL {
+            margin-left: 15px;
+        }
+        @include setStyleLTR {
+            margin-right: 15px;
+        }
+    }
+    font-family: $body-font-family;
+}
+.input-password {
+    font-size: 1rem !important;
+}
+.fs-32 {font-size: 32px !important;}
+.fs-12 {font-size: 12px !important;}
+.fs-14 {font-size: 14px !important;}
+.z-1000 {z-index: 1000;}
+.text-muted {color: #809FB8 !important}
