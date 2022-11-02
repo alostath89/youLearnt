@@ -386,10 +386,16 @@ $fontSize14px: 14px;
 
         .v-input__slot {
             background-color: #c7c7c736;
-            border: 1px solid #3609091f !important;
+            border: 1px solid #3609091f;
 
             fieldset {
                 border: 0 !important;
+            }
+        }
+        .v-input--checkbox{
+            .v-input__slot {
+                background-color: transparent;
+                border: 0;
             }
         }
     }
@@ -619,5 +625,11 @@ $fontSize14px: 14px;
             color: #2f4986 !important;
             font-weight: 500 !important;
         }
+    }
+}
+
+@media (min-width: 1400px){
+    .container {
+        max-width: 1320px !important;
     }
 }

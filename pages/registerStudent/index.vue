@@ -1,42 +1,76 @@
 <template>
-    <v-row class="registerStudent">
-        <v-col cols="12" md="6">
-            <div class="pa-7">
-                <h2 class="text-h1">
-                    Reasons to <span class="bold-underline">LEARN</span>
-                    on <span class="bold-underline">YouLerant</span>
-                </h2>
-            </div>
-
+    <div class="container">
+        <div class="pt-10 mt-md-10 mt-0 mb-md-5">
+            <h2 class="">Reasons to <u>Learn</u> <br/> on YouLerant</h2>
+        </div>
+        <v-row class="registerStudent">
+        <v-col cols="12" md="7">
             <div class="reasons">
                 <v-row>
-                    <v-col
-                        v-for="(item, index) in items"
-                        :key="index"
-                        cols="12"
-                        class="reasons-item"
-                        md="6"
-                    >
+                    <v-col cols="12" md="6">
                         <div class="d-flex">
-                            <i class="fal fa-check-circle me-3 primary--text" />
+                            <i class="fas fa-check-circle me-3 primary--text" />
                             <p>
                                 Choose a time that suits you to learn.
                                 (24 hours a day, 7 days a week)
                             </p>
                         </div>
                     </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Choose the hourly cost that fits you.</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Learn any subject you want.</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Choose tutors from anywhere around the world.</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Buy a package that fits your needs.</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Learn your lessons from anywhere on Earth</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Change your tutor whenever you want.</p>
+                        </div>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="d-flex">
+                            <i class="fas fa-check-circle me-3 primary--text" />
+                            <p>Use all modern techniques in learning.</p>
+                        </div>
+                    </v-col>
                 </v-row>
             </div>
         </v-col>
-
-        <v-col cols="12" md="6" class="registration-form">
-            <form-observer ref="formObserver" form-class="row" @submit="submit">
-                <v-col cols="12">
-                    <h6 class="text-h6 text-center">
+        <v-col cols="12" md="5">
+            <div  class="registration-form">
+                <div class="registration-form-bg">
+                    <form-observer ref="formObserver" form-class="row" @submit="submit">
+                <v-col cols="12" class="py-0">
+                    <h3 class="text-center">
                         Sign up to start learn whatever you want.
-                    </h6>
+                    </h3>
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="12" class="py-0">
                     <text-field
                         :value.sync="form.email"
                         type="text"
@@ -44,7 +78,7 @@
                         sub-label="email"
                     />
                 </v-col>
-                <v-col cols="6">
+                <v-col cols="6" class="py-0">
                     <text-field
                         :value.sync="form.first_name"
                         type="text"
@@ -52,7 +86,7 @@
                         sub-label="firstName"
                     />
                 </v-col>
-                <v-col cols="6">
+                <v-col cols="6" class="py-0">
                     <text-field
                         :value.sync="form.last_name"
                         type="text"
@@ -60,7 +94,7 @@
                         sub-label="lastName"
                     />
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="12" class="py-0">
                     <text-field
                         :value.sync="form.password"
                         :type.sync="inputPassword"
@@ -69,7 +103,7 @@
                         sub-label="password"
                     />
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="12" class="py-0">
                     <text-field
                         :value.sync="form.password_confirmation"
                         :type.sync="inputPassword"
@@ -77,8 +111,8 @@
                         sub-label="password"
                     />
                 </v-col>
-                <v-col cols="12">
-                    <checkbox-field :value="form.accept">
+                <v-col cols="12" class="py-0">
+                    <checkbox-field :value="form.accept" class="checkbox-style">
                         <div>
                             Accept and agree to our
                             <a href="#" target="_blank" @click.stop>Terms</a>,
@@ -88,7 +122,7 @@
                     </checkbox-field>
                 </v-col>
 
-                <v-col v-if="errors" cols="12">
+                <v-col v-if="errors" cols="12" class="py-0">
                     <Errors :errors="errors" />
                 </v-col>
 
@@ -97,11 +131,11 @@
                         :loading="loading"
                         type="submit"
                         color="primary"
-                        class="px-10 py-6 text-h6"
+                        class="px-10 py-6 signUpBtn"
                     >
                         {{ $t('studentRegister') }}
                     </v-btn>
-                    <p class="mt-4">
+                    <p class="mt-4 accountLoginLink">
                         Already have an account?
                         <nuxt-link :to="{ name: 'login' }">
                             Login
@@ -109,8 +143,11 @@
                     </p>
                 </v-col>
             </form-observer>
+                </div>
+            </div>
         </v-col>
     </v-row>
+    </div>
 </template>
 
 <script>

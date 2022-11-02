@@ -78,27 +78,91 @@
     }
     .registerStudent,
     .registerTeacher {
-        display: flex;
+        //display: flex;
         align-items: center;
+        h2{
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
         .registration-form {
-            background-image: url("~/assets/images/login-bg.png");
-            background-size: 92% 120%;
-            background-repeat: no-repeat;
-            background-position: top right;
-            display: flex;
-            align-items: center;
+            background: #cde0e917;
+            padding: 1.8rem;
+            position: relative;
             .observer-content {
-                padding: 3rem 10rem;
+                background: #fff;
+                padding: 1.8rem;
+                position: relative;
+                z-index: 1;
                 form {
-                    padding: 1rem;
-                    background: #fff;
+                    position: relative;
+                    z-index: 2;
+                    h3{
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 28.8px;
+                        margin-bottom: 1.5rem;
+                    }
                 }
+            }
+            .registration-form-bg{
+                position: relative;
+                z-index: 1;
+                &:after{
+                    content: '';
+                    background: url("~/assets/images/dot.svg");
+                    position: absolute;
+                    width: 150px;
+                    left: -50px;
+                    bottom: -50px;
+                    z-index: 0;
+                    height: 150px;
+                    background-size: cover;
+                }
+            }
+            &:before, &:after {
+                content: '';
+                height: 12rem;
+                background-color: rgba(239,35,60,1);
+                opacity: .2;
+                mix-blend-mode: multiply;
+                width: 12rem;
+                filter: blur(46px);
+                position: absolute;
+                right: -30px;
+                top: -5px;
+                z-index: 0;
+            }
+            &:before {
+                background-color: #2F4986;
+                bottom: -40px;
+                top: auto;
+                left: 80px;
+            }
+            .checkbox-style{
+                color: #949494;
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 24px;
+            }
+            .accountLoginLink{
+                font-size: 14px;
+                color: #949494;
+                text-decoration: underline;
+            }
+            .signUpBtn{
+                font-size: 17px;
             }
         }
         .reasons {
-            margin: 4rem 0 2rem;
-            &-item {
-                margin-top: 1rem;
+            .d-flex{
+                margin-bottom: 8px;
+                min-height: 55px;
+                font-weight: 500;
+                font-size: 16px;
+                i{
+                    margin-top: 3px;
+                }
             }
         }
     }
@@ -167,8 +231,8 @@
         .blog-emoji {
             .icon {font-size: 45px;}
         }
-        
-        
+
+
         .blog-comments {
             background-color: #fff;
             border: 1px solid #dee2e6;
@@ -187,12 +251,12 @@
                     transition: .3s;
                 }
                 .replay-btn:hover{color: #0a58ca}
-                
+
             }
-            
-            
-        }  
-        .replay-field-box, .replay-field-box  textarea{border: 1px solid #dee2e6}  
+
+
+        }
+        .replay-field-box, .replay-field-box  textarea{border: 1px solid #dee2e6}
         .replay-field-box  textarea:focus {border: 1px solid #2f4986}
         .replay-field-box  {
             textarea  {
@@ -200,7 +264,7 @@
                 border-radius: 8px;
             }
             .v-input__slot {padding:0}
-        }  
+        }
 
     }
     .community {
@@ -226,6 +290,6 @@
             background-position: 50% 50%;
         }
     }
-    
+
 
 }
