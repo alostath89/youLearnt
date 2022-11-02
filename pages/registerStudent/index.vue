@@ -3,7 +3,7 @@
         <div class="pt-10 mt-md-10 mt-0 mb-md-5">
             <h2 class="">Reasons to <u>Learn</u> <br/> on YouLerant</h2>
         </div>
-        <v-row class="registerStudent">
+        <v-row class="registerStudent pb-16">
         <v-col cols="12" md="7">
             <div class="reasons">
                 <v-row>
