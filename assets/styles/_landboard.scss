@@ -84,16 +84,28 @@
             font-size: 50px;
             font-weight: 500;
             line-height: 1.2;
+            @media screen and (max-width: 959px){
+                font-size: 40px;
+            }
+            @media screen and (max-width: 371px){
+                font-size: 30px;
+            }
         }
         .registration-form {
             background: #cde0e917;
             padding: 1.8rem;
             position: relative;
+            @media screen and (max-width: 959px){
+                padding: 1rem;
+            }
             .observer-content {
                 background: #fff;
                 padding: 1.8rem;
                 position: relative;
                 z-index: 1;
+                @media screen and (max-width: 959px){
+                    padding: 1.8rem 1rem;
+                }
                 form {
                     position: relative;
                     z-index: 2;
@@ -118,6 +130,9 @@
                     z-index: 0;
                     height: 150px;
                     background-size: cover;
+                    @media screen and (max-width: 959px){
+                        display: none;
+                    }
                 }
             }
             &:before, &:after {
@@ -132,6 +147,9 @@
                 right: -30px;
                 top: -5px;
                 z-index: 0;
+                @media screen and (max-width: 959px){
+                    display: none;
+                }
             }
             &:before {
                 background-color: #2F4986;
@@ -149,6 +167,7 @@
                 font-size: 14px;
                 color: #949494;
                 text-decoration: underline;
+                font-weight: 500;
             }
             .signUpBtn{
                 font-size: 17px;
@@ -160,9 +179,15 @@
                 min-height: 55px;
                 font-weight: 500;
                 font-size: 16px;
+                @media screen and (max-width: 959px){
+                    min-height: auto;
+                }
                 i{
                     margin-top: 3px;
                 }
+            }
+            @media screen and (max-width: 959px){
+                margin-bottom: 30px;
             }
         }
     }
@@ -292,4 +317,36 @@
     }
 
 
+}
+
+.landBoard-layout{
+    .login{
+        padding: 8rem 0;
+         .registerStudent {
+             .registration-form{
+                 padding: 0rem 0 10rem;
+                 .observer-content{
+                     padding: 3rem;
+                     border-radius: 10px;
+                     margin-top: -10px;
+                     box-shadow: 0px 0px 10px -5px #cde0e9;
+                     form{
+                         h3{
+                             margin-bottom: 2.5rem;
+                         }
+                     }
+                 }
+                 .checkbox-style{
+                     margin-bottom: 2rem;
+                     label{
+                         margin-bottom: 0 !important;
+                     }
+                 }
+                 .signUpBtn{
+                     margin-bottom: 1rem;
+                     border-radius: 10px;
+                 }
+             }
+         }
+    }
 }
